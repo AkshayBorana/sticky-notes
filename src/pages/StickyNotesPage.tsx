@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type RefObject } from "react";
 import NoteCard from "../components/NoteCard";
 import type { Note } from "../types/Note";
 import { getRandomColor } from "../utils";
+import Trash from "../icons/Trash";
 
 const StickyNotesPage: React.FC = () => {
     const [notes, setNotes] = useState<Note[]>([]);
@@ -45,8 +46,15 @@ const StickyNotesPage: React.FC = () => {
 
     return (
         <div>
-            <div>
-                <button style={{ color: "#fff" }} onClick={addNote}>Add note</button>
+            <div className="add-note">
+                <button style={{
+                    color: "green",
+                    width: "120px",
+                    height: '40px',
+                    fontSize: '14px',
+                    backgroundColor: 'hsl(1, 100%, 900%)',
+                    borderRadius: '4px'
+                }} onClick={addNote}>Add note</button>
             </div>
             {
                 notes.map((note) => (
@@ -58,21 +66,20 @@ const StickyNotesPage: React.FC = () => {
                 ref={trashRef}
                 style={{
                     position: 'fixed',
-                    bottom: '10px',
-                    right: '10px',
-                    width: '50px',
-                    height: '50px',
-                    backgroundColor: 'lightgray',
+                    bottom: '20px',
+                    right: '20px',
+                    width: '70px',
+                    height: '70px',
+                    backgroundColor: 'hsl(1, 100%, 900%)',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '30px',
                     zIndex: 1000,
                     cursor: 'pointer',
                 }}
             >
-                🗑️
+                <Trash />
             </div>
         </div>
     )

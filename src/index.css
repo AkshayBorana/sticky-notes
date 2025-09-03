@@ -23,6 +23,13 @@ body {
   height: inherit;
 }
 
+.add-note {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 10px 18px 0px 0px;
+}
+
 .card {
   width: 400px;
   border-radius: 5px;
@@ -32,51 +39,52 @@ body {
 }
 
 .card-body {
-    padding: 1em;
-    border-radius: 0 0 5px 5px;
+  padding: 1em;
+  border-radius: 0 0 5px 5px;
 }
- 
+
 .card-body textarea {
-    background-color: inherit;
-    border: none;
-    width: 100%;
-    height: 100%;
-    resize: none;
-    font-size: 16px;
+  background-color: inherit;
+  border: none;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  font-size: 16px;
 }
- 
+
 textarea:focus {
-    background-color: inherit;
-    outline: none;
-    width: 100%;
-    height: 100%;
+  background-color: inherit;
+  outline: none;
+  width: 100%;
+  height: 100%;
 }
 
 .card-header {
-    height: 36px;
-    border-radius: 5px 5px 0 0;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding: 5px;
-    border-bottom: 1px solid #8c8787;
+  height: 36px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #8c8787;
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
- 
+
 .spinner {
-    animation: spin var(--spinner-animation-speed) linear infinite;
+  animation: spin var(--spinner-animation-speed) linear infinite;
 }
- 
+
 .card-saving {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
