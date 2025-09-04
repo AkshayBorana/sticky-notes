@@ -1,69 +1,31 @@
-# React + TypeScript + Vite
+# Sticky Notes React.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Drag & Drop sticky notes App built with React + TypeScript + Vite.
 
-Currently, two official plugins are available:
+### Pre-requisite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-  Node version required to run this application should be > `20.19.0`
 
-## Expanding the ESLint configuration
+### Technologies Used.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   React `^19.1.1`
+-   TypeScript `~5.8.3`
+-   Vite `^7.1.2`
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Features.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+-   Create a Note anywhere on screen.
+-   Update Note data and position.
+-   Saving notes to local storage (restoring them on page load)..
+-   Autogrow note size as data is input.
+-   Autosave notes as you add data.
+-   Remove a note by dragging it over a predefined "trash" zone.
+-   Entering/editing note text.
+-   Moving notes to front (in case of overlapping notes).
+-   Different note colors.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Setup instructions.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-   Clone repo: `git clone <REPO URL>`
+-   Install dependencies: `npm i`
+-   Serveing the application: `npm run dev`
